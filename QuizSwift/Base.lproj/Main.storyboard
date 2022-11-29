@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuizSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dXv-vh-dpK">
+                                <rect key="frame" x="10" y="54" width="394" height="798"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IfL-Vc-qUJ">
+                                        <rect key="frame" x="10" y="0.0" width="374" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="Vw6-90-FWg"/>
+                                        </constraints>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpM-Dp-foc">
+                                        <rect key="frame" x="10" y="18" width="374" height="664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAI-P2-wdx">
+                                        <rect key="frame" x="20" y="690" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="lga-sa-AwJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="True">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSY-Jj-YJB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZg-1U-URU">
+                                        <rect key="frame" x="20" y="748" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="K6u-IU-YNe"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="False">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zic-oj-q7v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VAI-P2-wdx" secondAttribute="trailing" constant="20" id="Bd9-q5-Pyu"/>
+                                    <constraint firstItem="nZg-1U-URU" firstAttribute="leading" secondItem="dXv-vh-dpK" secondAttribute="leading" constant="20" id="Gc7-eq-Hxa"/>
+                                    <constraint firstItem="VAI-P2-wdx" firstAttribute="top" secondItem="DpM-Dp-foc" secondAttribute="bottom" constant="40" id="IQr-3O-IL3"/>
+                                    <constraint firstAttribute="trailing" secondItem="nZg-1U-URU" secondAttribute="trailing" constant="20" id="WZu-dx-8Ih"/>
+                                    <constraint firstItem="nZg-1U-URU" firstAttribute="top" secondItem="VAI-P2-wdx" secondAttribute="bottom" constant="10" id="Wid-o7-c8z"/>
+                                    <constraint firstItem="VAI-P2-wdx" firstAttribute="leading" secondItem="dXv-vh-dpK" secondAttribute="leading" constant="20" id="ZEa-8x-gYw"/>
+                                    <constraint firstAttribute="trailing" secondItem="IfL-Vc-qUJ" secondAttribute="trailing" constant="10" id="fGa-8w-sG1"/>
+                                    <constraint firstAttribute="trailing" secondItem="DpM-Dp-foc" secondAttribute="trailing" constant="10" id="qRI-7M-Ag2"/>
+                                    <constraint firstItem="IfL-Vc-qUJ" firstAttribute="leading" secondItem="dXv-vh-dpK" secondAttribute="leading" constant="10" id="tCi-WY-nwg"/>
+                                    <constraint firstItem="DpM-Dp-foc" firstAttribute="leading" secondItem="dXv-vh-dpK" secondAttribute="leading" constant="10" id="tQh-1p-Nnl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dXv-vh-dpK" secondAttribute="trailing" constant="10" id="8r0-YP-jYu"/>
+                            <constraint firstItem="dXv-vh-dpK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="EXC-1G-Ht7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dXv-vh-dpK" secondAttribute="bottom" constant="10" id="agW-PN-HOJ"/>
+                            <constraint firstItem="dXv-vh-dpK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="sb2-Ke-uKN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseButton" destination="nZg-1U-URU" id="crr-ev-d5g"/>
+                        <outlet property="progressBar" destination="IfL-Vc-qUJ" id="lO8-PE-hMA"/>
+                        <outlet property="questionLabel" destination="DpM-Dp-foc" id="2rR-ec-ZOK"/>
+                        <outlet property="trueButton" destination="VAI-P2-wdx" id="qco-Av-xOT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="87"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

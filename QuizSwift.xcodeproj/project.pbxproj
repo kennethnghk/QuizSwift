@@ -16,6 +16,7 @@
 		AAAF5A6B2935FEAB003680AD /* QuizSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF5A6A2935FEAB003680AD /* QuizSwiftTests.swift */; };
 		AAAF5A752935FEAB003680AD /* QuizSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF5A742935FEAB003680AD /* QuizSwiftUITests.swift */; };
 		AAAF5A772935FEAB003680AD /* QuizSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF5A762935FEAB003680AD /* QuizSwiftUITestsLaunchTests.swift */; };
+		AAAF5A84293605E9003680AD /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF5A83293605E9003680AD /* Questions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AAAF5A702935FEAB003680AD /* QuizSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAAF5A742935FEAB003680AD /* QuizSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSwiftUITests.swift; sourceTree = "<group>"; };
 		AAAF5A762935FEAB003680AD /* QuizSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AAAF5A83293605E9003680AD /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				AAAF5A5C2935FEAB003680AD /* Assets.xcassets */,
 				AAAF5A5E2935FEAB003680AD /* LaunchScreen.storyboard */,
 				AAAF5A612935FEAB003680AD /* Info.plist */,
+				AAAF5A83293605E9003680AD /* Questions.swift */,
 			);
 			path = QuizSwift;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAAF5A582935FEAA003680AD /* ViewController.swift in Sources */,
+				AAAF5A84293605E9003680AD /* Questions.swift in Sources */,
 				AAAF5A542935FEAA003680AD /* AppDelegate.swift in Sources */,
 				AAAF5A562935FEAA003680AD /* SceneDelegate.swift in Sources */,
 			);
